@@ -1,4 +1,4 @@
-import { Phone } from './PhoneBook/phone';
+import { Phone } from './phone';
 
 export const PHONES: Phone[] = [
   {

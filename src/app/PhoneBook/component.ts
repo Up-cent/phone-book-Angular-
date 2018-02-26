@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Phone } from './phone';
 import { PHONES } from '../fake-phones';
 
 @Component({
@@ -8,11 +7,6 @@ import { PHONES } from '../fake-phones';
   styleUrls: ['./style.css']
 })
 export class PhoneBookComponent implements OnInit {
-  phone: Phone = {
-    name: 'Suzanna',
-    surname: 'Vaimen',
-    phone: 12312312
-  };
 
   phones: PHONES;
 
