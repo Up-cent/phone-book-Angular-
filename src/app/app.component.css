@@ -1,0 +1,10 @@
+.header {
+  text-align: center;
+  background-color: #61a6bb;
+  text-transform: unset;
+  color: black;
+  font-size: 28px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  padding: 20px;
+}
