@@ -1,0 +1,15 @@
+<ul class="list">
+  <li class="list-item" *ngFor="let contact of contacts">
+    <a class="link" routerLink="/detail/{{contact.id}}">
+      <div class="full-name">
+        <span>{{contact.name}}</span>
+        <span>{{contact.surname}}</span>
+      </div>
+      Phone:
+      <span class="phone">{{contact.phone}}</span>
+    </a>
+
+  </li>
+</ul>
+
+<div app-phone-book-item-detail="" [contact]="contact"></div>

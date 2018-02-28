@@ -1,0 +1,24 @@
+.field  {
+  color: #000;
+  font-size: 20px;
+  display: block;
+  margin-top: 10px;
+}
+
+.field:first-of-type  {
+  margin-top: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  display: block;
+  margin-top: 10px;
+}
+
+.label:first-of-type  {
+  margin-top: 0;
+}

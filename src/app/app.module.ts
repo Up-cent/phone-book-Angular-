@@ -1,19 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import {PhoneBookComponent} from './PhoneBook/component';
+import {PHONE_BOOK_DECLARATIONS} from './PhoneBook/config/declarations';
+import {PhoneBookService} from './phoneBook.service';
+import {AppRoutingModule} from './app-routing.module';
+import {AppEnterComponent} from './enter-page/component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhoneBookComponent
+    PHONE_BOOK_DECLARATIONS,
+    AppEnterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [PhoneBookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
