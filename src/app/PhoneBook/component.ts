@@ -10,7 +10,7 @@ import {PhoneBookService} from '../phoneBook.service';
 })
 export class PhoneBookComponent implements OnInit {
 
-  contacts: PhoneBookInterface[];
+  contacts: PhoneBookInterface[] = [];
 
   constructor(private phoneService: PhoneBookService) { }
 
@@ -20,7 +20,12 @@ export class PhoneBookComponent implements OnInit {
 
   getContacts(): void {
     this.phoneService.getContacts()
-      .subscribe(contacts => this.contacts = contacts);
+      .subscribe(
+        (contacts: PhoneBookInterface[]) => this.contacts = contacts,
+        (err) => console.log(err)
+      );
   }
+
+  // this.contacts = contacts
 
 }

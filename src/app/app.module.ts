@@ -7,6 +7,7 @@ import {PHONE_BOOK_DECLARATIONS} from './PhoneBook/config/declarations';
 import {PhoneBookService} from './phoneBook.service';
 import {AppRoutingModule} from './app-routing.module';
 import {AppEnterComponent} from './enter-page/component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -14,12 +15,13 @@ import {AppEnterComponent} from './enter-page/component';
   declarations: [
     AppComponent,
     PHONE_BOOK_DECLARATIONS,
-    AppEnterComponent
+    AppEnterComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [PhoneBookService],
   bootstrap: [AppComponent]

@@ -13,7 +13,7 @@ import { PhoneBookService } from '../../../phoneBook.service';
 })
 export class PhoneBookItemDetailComponent implements OnInit {
 
-  @Input() public contact: PhoneBookInterface[];
+  @Input() public contact: PhoneBookInterface;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,14 +22,10 @@ export class PhoneBookItemDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getContact();
+    // this.getContact();
   }
 
-  getContact(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.phoneService.getContact(id)
-      .subscribe(contact => this.contact = contact);
-  }
+
 
   goBack(): void {
     this.location.back();
