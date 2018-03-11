@@ -20,6 +20,6 @@ export class PhoneBookItemComponent {
       phone: phone
     };
 
-    this.contacts = this.contacts.push(contact);
+    this.contacts.push(contact);
   }
 }
