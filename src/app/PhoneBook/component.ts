@@ -26,6 +26,4 @@ export class PhoneBookComponent implements OnInit {
       );
   }
 
-  // this.contacts = contacts
-
 }

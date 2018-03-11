@@ -1,0 +1,22 @@
+<div>
+  <label>New contact:
+    <input #contactName />
+    <input #contactSurname />
+    <input #contactNumber />
+  </label>
+  <button
+    (click)="addContact(contactName.value, contactSurname.value, contactNumber.value);
+  ">
+    add
+  </button>
+</div>
+
+<ul class="list">
+  <li
+    app-phone-book-contact-edit
+    class="list-item"
+    *ngFor="let contact of contacts"
+    [contact]="contact"
+  >
+  </li>
+</ul>

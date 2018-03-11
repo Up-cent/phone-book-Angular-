@@ -1,0 +1,27 @@
+
+<div class="contact-wrapper" *ngIf="!edit">
+  <div>
+    <div class="full-name">
+      <span>{{contact.name}}</span>
+      <span>{{contact.surname}}</span>
+    </div>
+    Phone:
+    <span class="phone">{{contact.phone}}</span>
+  </div>
+  <button class="button" (click)="onEdit()">Edit</button>
+</div>
+
+<div class="contact-wrapper" *ngIf="edit">
+  <div>
+    <label class="label">Name:
+      <input [(ngModel)]="contact.name" placeholder="name"/>
+    </label>
+    <label class="label">Surname:
+      <input [(ngModel)]="contact.surname" placeholder="surname"/>
+    </label>
+    <label class="label">Phone:
+      <input [(ngModel)]="contact.phone" placeholder="phone"/>
+    </label>
+  </div>
+  <button class="button" (click)="save()">Save</button>
+</div>
